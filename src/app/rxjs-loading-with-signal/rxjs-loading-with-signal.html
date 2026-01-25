@@ -1,0 +1,10 @@
+<h1>rxjsloading with signal pagina</h1>
+
+@if (!itemDtosWrappedWithLoadState().loaded) {
+    <p>Loading items...</p>
+}
+@else {
+    @for (item of itemDtosWrappedWithLoadState().items; track $index) {
+        <p>{{item.name}}</p>
+    }
+}

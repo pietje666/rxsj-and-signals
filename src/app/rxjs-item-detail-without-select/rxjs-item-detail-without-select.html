@@ -1,0 +1,6 @@
+<h1>Starred item by {{(starredItem$ | async)?.starredBy}}</h1>
+@if ((itemDetails$ | async); as itemDetail) {
+    <h2>Details for {{itemDetail.name}}</h2>
+    <p>Description: {{itemDetail.country}}</p>
+    <p>Price: {{itemDetail.detail}}</p>
+}

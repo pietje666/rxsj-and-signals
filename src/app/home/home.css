@@ -1,0 +1,128 @@
+.home-container {
+  position: relative;
+  height: calc(100vh - 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.snake {
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  animation: moveSnake 20s linear infinite;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+.snake-body-path {
+  animation: animateBody 2s ease-in-out infinite;
+}
+
+.snake-tail {
+  animation: animateTail 2s ease-in-out infinite;
+}
+
+.snake-head-group {
+  animation: animateHead 2s ease-in-out infinite;
+}
+
+.tongue {
+  animation: flickerTongue 0.3s ease-in-out infinite;
+}
+
+.tongue-left {
+  animation-delay: 0s;
+}
+
+.tongue-right {
+  animation-delay: 0.15s;
+}
+
+@keyframes moveSnake {
+  0% {
+    left: -350px;
+    top: 30%;
+  }
+  25% {
+    left: 20%;
+    top: 40%;
+  }
+  50% {
+    left: 40%;
+    top: 25%;
+  }
+  75% {
+    left: 65%;
+    top: 45%;
+  }
+  100% {
+    left: calc(100% + 50px);
+    top: 30%;
+  }
+}
+
+@keyframes animateBody {
+  0% {
+    d: path('M 50 75 Q 100 50, 150 75 T 250 75');
+  }
+  25% {
+    d: path('M 50 75 Q 100 100, 150 75 T 250 75');
+  }
+  50% {
+    d: path('M 50 75 Q 100 50, 150 75 T 250 75');
+  }
+  75% {
+    d: path('M 50 75 Q 100 100, 150 75 T 250 75');
+  }
+  100% {
+    d: path('M 50 75 Q 100 50, 150 75 T 250 75');
+  }
+}
+
+@keyframes animateTail {
+  0% {
+    d: path('M 50 75 L 45 70 L 40 75 L 45 80 Z');
+  }
+  25% {
+    d: path('M 50 75 L 45 72 L 40 75 L 45 78 Z');
+  }
+  50% {
+    d: path('M 50 75 L 45 70 L 40 75 L 45 80 Z');
+  }
+  75% {
+    d: path('M 50 75 L 45 72 L 40 75 L 45 78 Z');
+  }
+  100% {
+    d: path('M 50 75 L 45 70 L 40 75 L 45 80 Z');
+  }
+}
+
+@keyframes animateHead {
+  0% {
+    transform: translate(250px, 75px) rotate(0deg);
+  }
+  25% {
+    transform: translate(250px, 75px) rotate(-5deg);
+  }
+  50% {
+    transform: translate(250px, 75px) rotate(0deg);
+  }
+  75% {
+    transform: translate(250px, 75px) rotate(5deg);
+  }
+  100% {
+    transform: translate(250px, 75px) rotate(0deg);
+  }
+}
+
+@keyframes flickerTongue {
+  0%, 100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scaleX(0.85);
+  }
+}
