@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { DataService } from '../services/data.service';
-import { Observable, shareReplay, Subject, switchMap } from 'rxjs';
+import { Observable, shareReplay, switchMap } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ItemDetailDto } from '../dtos/item-detail-dto';
@@ -12,6 +12,7 @@ import { StarredItemDto } from '../dtos/starred-item-dto';
   imports: [AsyncPipe, FormsModule],
   templateUrl: './rxjs-item-detail-without-select.html',
   styleUrl: './rxjs-item-detail-without-select.css',
+  changeDetection: ChangeDetectionStrategy.OnPush 
 })
 export class RxjsItemDetailWithoutSelect {
 

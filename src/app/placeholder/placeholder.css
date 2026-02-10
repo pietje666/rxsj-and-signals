@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.item-details {
+  padding: 1rem;
+}
+
+.item-details h2 {
+  margin-top: 0;
+}

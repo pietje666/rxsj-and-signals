@@ -1,0 +1,13 @@
+<select [(ngModel)]='selectedItemId' (ngModelChange)="onSelect($event)">
+    <option>empty</option>
+    @for (item of (items$ | async); track $index) {
+        <option [value]='item.id'>{{item.name}}</option>
+    }
+</select>
+<!-- @let itemDetail = itemDetails ; -->
+@if (itemDetails) {
+    <h2>Details for {{itemDetails.name}}</h2>
+    <p>Description: {{itemDetails.country}}</p>
+    <p>Price: {{itemDetails.detail}}</p>
+}
+<app-placeholder [itemDetail]="itemDetails"></app-placeholder>

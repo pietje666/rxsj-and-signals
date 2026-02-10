@@ -1,8 +1,7 @@
-import { Component, Signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Signal } from '@angular/core';
 import { ItemDto } from '../dtos/item-dto';
 import { DataService } from '../services/data.service';
 import { Subject, switchMap } from 'rxjs';
-import { AsyncPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ItemDetailDto } from '../dtos/item-detail-dto';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -12,6 +11,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
   imports: [FormsModule],
   templateUrl: './rxjs-item-detail-with-signal.html',
   styleUrl: './rxjs-item-detail-with-signal.css',
+  changeDetection: ChangeDetectionStrategy.OnPush 
 })
 
 export class RxjsItemDetailWithSignal {

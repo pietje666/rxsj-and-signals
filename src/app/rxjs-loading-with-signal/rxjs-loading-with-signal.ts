@@ -1,5 +1,5 @@
-import { Component, Signal } from '@angular/core';
-import { map, Observable, startWith } from 'rxjs';
+import { ChangeDetectionStrategy, Component, Signal } from '@angular/core';
+import { map, startWith } from 'rxjs';
 import { DataService } from '../services/data.service';
 import { ItemDto } from '../dtos/item-dto';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -9,6 +9,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
   imports: [],
   templateUrl: './rxjs-loading-with-signal.html',
   styleUrl: './rxjs-loading-with-signal.css',
+  changeDetection: ChangeDetectionStrategy.OnPush 
 })
 export class RxjsLoadingWithSignal {
   public itemDtosWrappedWithLoadState! : Signal<{ loaded: boolean; items: ItemDto[]}>;

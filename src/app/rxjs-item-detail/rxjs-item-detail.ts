@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { Observable, Subject, switchMap } from 'rxjs';
 import { ItemDto } from '../dtos/item-dto';
@@ -12,6 +12,7 @@ import { ItemDetailDto } from '../dtos/item-detail-dto';
   imports: [AsyncPipe, FormsModule],
   templateUrl: './rxjs-item-detail.html',
   styleUrl: './rxjs-item-detail.css',
+  changeDetection: ChangeDetectionStrategy.OnPush 
 })
 export class RxjsItemDetail {
 

@@ -1,3 +1,10 @@
+:host {
+  display: block;
+  background-color: #f0f9ff;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
 .home-container {
   position: relative;
   height: calc(100vh - 200px);
