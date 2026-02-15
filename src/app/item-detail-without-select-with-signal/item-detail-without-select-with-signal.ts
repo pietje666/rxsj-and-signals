@@ -8,13 +8,13 @@ import { toSignal } from '@angular/core/rxjs-interop';
 
 
 @Component({
-  selector: 'app-rxjs-item-detail-without-select-with-signal',
+  selector: 'app-item-detail-without-select-with-signal',
   imports: [FormsModule],
-  templateUrl: './rxjs-item-detail-without-select-with-signal.html',
-  styleUrl: './rxjs-item-detail-without-select-with-signal.css',
+  templateUrl: './item-detail-without-select-with-signal.html',
+  styleUrl: './item-detail-without-select-with-signal.css',
   changeDetection: ChangeDetectionStrategy.OnPush 
 })
-export class RxjsItemDetailWithoutSelectWithSignal {
+export class ItemDetailWithoutSelectWithSignal {
 
   public itemDetails: Signal<ItemDetailDto | undefined> = signal(undefined);
 
@@ -26,9 +26,7 @@ export class RxjsItemDetailWithoutSelectWithSignal {
 
     effect(() => {
       if(this.starredItem()) {
-        runInInjectionContext(this.injector, () => {
-          this.itemDetails = toSignal( this.dataService.getItemDetails(this.starredItem()!.id), {injector: this.injector} );
-        });
+          this.itemDetails = toSignal( this.dataService.getItemDetails(this.starredItem()!.id));
         
       }
     });

@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
-import { firstValueFrom, Observable, Subject, switchMap } from 'rxjs';
+import { firstValueFrom, Observable } from 'rxjs';
 import { ItemDto } from '../dtos/item-dto';
 import { AsyncPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -9,16 +9,15 @@ import { PlaceholderComponent } from "../placeholder/placeholder";
 
 
 @Component({
-  selector: 'app-rxjs-item-detail-with-promise',
+  selector: 'app-item-detail-with-promise',
   imports: [AsyncPipe, FormsModule, PlaceholderComponent],
-  templateUrl: './rxjs-item-detail-with-promise.html',
-  styleUrl: './rxjs-item-detail-with-promise.css',
+  templateUrl: './item-detail-with-promise.html',
+  styleUrl: './item-detail-with-promise.css',
   changeDetection: ChangeDetectionStrategy.OnPush 
 })
-export class RxjsItemDetailWithPromise implements OnInit {
+export class ItemDetailWithPromise implements OnInit {
 
   public items$: Observable<ItemDto[]> ;
-    public selectedItem$: Subject<number> = new Subject<number>();
     public itemDetails: ItemDetailDto | null = null;
 
   public selectedItemId: number | null = null;
@@ -30,7 +29,6 @@ export class RxjsItemDetailWithPromise implements OnInit {
     }
 
   async onSelect(itemId: number) {
-    this.selectedItem$.next(itemId);
     this.itemDetails = await firstValueFrom(this.dataService.getItemDetails(itemId));
     //  this.itemDetails = this.getRandomItemDetail();
 
@@ -58,7 +56,5 @@ export class RxjsItemDetailWithPromise implements OnInit {
     
     const randomIndex = Math.floor(Math.random() * availableItems.length);
     return availableItems[randomIndex];
-  }
-
-  
+  }  
 }
