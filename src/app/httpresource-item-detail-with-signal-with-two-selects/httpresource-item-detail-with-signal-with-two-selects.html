@@ -1,0 +1,24 @@
+<label for="item-select-primary">Select item</label>
+<select id="item-select-primary" [(ngModel)]="selectedItemId" (ngModelChange)="onSelect($event)">
+  <option value="">empty</option>
+  @for (item of items(); track $index) {
+    <option [value]="item.id">{{ item.name }}</option>
+  }
+</select>
+
+<label for="item-select-secondary">Select item (secondary)</label>
+<select id="item-select-secondary" [(ngModel)]="selectedItemIdSecondary" (ngModelChange)="otherSelect($event)">
+  <option value="">empty</option>
+  @for (item of items(); track $index) {
+    <option [value]="item.id">{{ item.name }}</option>
+  }
+</select>
+
+<h1>de som van deze twee items wordt gebruikt om het detail op te halen!</h1>
+
+
+@if (itemDetails(); as itemDetail) {
+  <h2>Details for {{ itemDetail.name }}</h2>
+  <p>Description: {{ itemDetail.country }}</p>
+  <p>Price: {{ itemDetail.detail }}</p>
+}

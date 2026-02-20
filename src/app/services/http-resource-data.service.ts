@@ -19,10 +19,24 @@ export class HttpResourceDataService {
   itemsResource = httpResource<ItemDto[]>(() => this.apiUrl);
 
   selectedItemId = signal<number | null>(null);
+  secondarySelectedItemId = signal<number | null>(null);  
 
   itemDetailsResource = httpResource<ItemDetailDto>(() => {
     const id = this.selectedItemId();
+    
     return id ? `${this.apiUrlDetails}/${id}` : undefined;
     // Returning undefined prevents the request if no ID is set
   });
+
+  
+  itemDetailsResourceTwoInputs = httpResource<ItemDetailDto>(() => {
+    const id = this.selectedItemId();
+    const secondarySelectedItemId = this.secondarySelectedItemId();
+    let url = undefined;
+    if (id && secondarySelectedItemId) {
+      url =`${this.apiUrlDetails}/${id}${secondarySelectedItemId}`;
+    }
+    return url;    
+  });
+
 }

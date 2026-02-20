@@ -1,0 +1,17 @@
+:host {
+  display: block;
+  background-color: #e0f2fe;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  margin: 0.75rem 0 0.25rem;
+}
+
+select {
+  display: block;
+  width: 100%;
+  max-width: 24rem;
+}

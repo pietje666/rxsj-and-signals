@@ -10,6 +10,7 @@ import { ItemDetailWithPromise } from './item-detail-with-promise/item-detail-wi
 import { ItemDetailWithoutSelectWithPromise } from './item-detail-without-select-with-promise/item-detail-without-select-with-promise';
 import { ItemDetailWithoutSelectWithPromiseAndSignal } from './item-detail-without-select-with-promise-and-signal/item-detail-without-select-with-promise-and-signal';
 import { HttpResourceItemDetailWithSignal } from './httpresource-item-detail-with-signal/httpresource-item-detail-with-signal';
+import { HttpResourceItemDetailWithSignalWithTwoSelects } from './httpresource-item-detail-with-signal-with-two-selects/httpresource-item-detail-with-signal-with-two-selects';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -22,5 +23,6 @@ export const routes: Routes = [
   { path: 'item-detail-with-promise', component: ItemDetailWithPromise},
   { path: 'item-detail-without-select-with-promise', component: ItemDetailWithoutSelectWithPromise},
   { path: 'item-detail-without-select-with-promise-and-signal', component: ItemDetailWithoutSelectWithPromiseAndSignal},
-  { path: 'httpresource-item-detail-with-signal', component: HttpResourceItemDetailWithSignal}
+  { path: 'httpresource-item-detail-with-signal', component: HttpResourceItemDetailWithSignal},
+  { path: 'httpresource-item-detail-with-signal-with-two-selects', component: HttpResourceItemDetailWithSignalWithTwoSelects}
 ];
