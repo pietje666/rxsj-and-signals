@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, Signal, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Subject } from 'rxjs';
 import { ItemDetailDto } from '../dtos/item-detail-dto';
 import { ItemDto } from '../dtos/item-dto';
 import { HttpResourceDataService } from '../services/http-resource-data.service';
