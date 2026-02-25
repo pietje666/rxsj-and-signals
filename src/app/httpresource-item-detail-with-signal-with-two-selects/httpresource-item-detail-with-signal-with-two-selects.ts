@@ -16,7 +16,6 @@ export class HttpResourceItemDetailWithSignalWithTwoSelects {
   private httpResourceDataService = inject(HttpResourceDataService);
 
   public items: Signal<ItemDto[] | undefined> = this.httpResourceDataService.itemsResource.value;
-  public selectedItem$: Subject<number> = new Subject<number>();
   public itemDetails: Signal<ItemDetailDto | undefined> = this.httpResourceDataService.itemDetailsResourceTwoInputs.value;
 
   public selectedItemId: number | null = null;
