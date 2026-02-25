@@ -20,11 +20,11 @@ export class HttpResourceItemDetailWithSignalWithTwoSelects {
   public selectedItemId: number | null = null;
   public selectedItemIdSecondary: number | null = null;
 
-  onSelect(itemId: number) {
+  public onSelect(itemId: number) : void {
     this.httpResourceDataService.selectedItemId.set(itemId);
   }
 
-  otherSelect(itemId: number) {
+  public otherSelect(itemId: number) : void {
     this.httpResourceDataService.secondarySelectedItemId.set(itemId);
   }
 }
