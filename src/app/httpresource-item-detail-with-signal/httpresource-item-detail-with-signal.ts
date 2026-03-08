@@ -15,9 +15,10 @@ import { HttpResourceDataService } from '../services/http-resource-data.service'
 
 export class HttpResourceItemDetailWithSignal {
 
-  public items: Signal<ItemDto[] | undefined> ;
+    public items: Signal<ItemDto[] | undefined> ;
     public selectedItem$: Subject<number> = new Subject<number>();
     public itemDetails: Signal<ItemDetailDto | undefined> ;
+    public userId: string | null = null;
 
   public selectedItemId: number | null = null;
 

@@ -11,6 +11,7 @@ import { ItemDetailWithoutSelectWithPromise } from './item-detail-without-select
 import { ItemDetailWithoutSelectWithPromiseAndSignal } from './item-detail-without-select-with-promise-and-signal/item-detail-without-select-with-promise-and-signal';
 import { HttpResourceItemDetailWithSignal } from './httpresource-item-detail-with-signal/httpresource-item-detail-with-signal';
 import { HttpResourceItemDetailWithSignalWithTwoSelects } from './httpresource-item-detail-with-signal-with-two-selects/httpresource-item-detail-with-signal-with-two-selects';
+import { RxjsSetVariablesInTap } from './bad-practices/rxjs-set-variables-in-tap/rxjs-set-variables-in-tap';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -24,5 +25,6 @@ export const routes: Routes = [
   { path: 'item-detail-without-select-with-promise', component: ItemDetailWithoutSelectWithPromise},
   { path: 'item-detail-without-select-with-promise-and-signal', component: ItemDetailWithoutSelectWithPromiseAndSignal},
   { path: 'httpresource-item-detail-with-signal', component: HttpResourceItemDetailWithSignal},
-  { path: 'httpresource-item-detail-with-signal-with-two-selects', component: HttpResourceItemDetailWithSignalWithTwoSelects}
+  { path: 'httpresource-item-detail-with-signal-with-two-selects', component: HttpResourceItemDetailWithSignalWithTwoSelects},
+  { path: 'bad-practices/rxjs-set-variables-in-tap', component: RxjsSetVariablesInTap}
 ];

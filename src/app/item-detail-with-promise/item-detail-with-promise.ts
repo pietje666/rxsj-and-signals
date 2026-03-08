@@ -6,11 +6,12 @@ import { AsyncPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ItemDetailDto } from '../dtos/item-detail-dto';
 import { PlaceholderComponent } from "../placeholder/placeholder";
+import { ComponentWithButton } from "../component-with-button/component-with-button";
 
 
 @Component({
   selector: 'app-item-detail-with-promise',
-  imports: [AsyncPipe, FormsModule, PlaceholderComponent],
+  imports: [AsyncPipe, FormsModule, PlaceholderComponent, ComponentWithButton],
   templateUrl: './item-detail-with-promise.html',
   styleUrl: './item-detail-with-promise.css',
   changeDetection: ChangeDetectionStrategy.OnPush 

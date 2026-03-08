@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DoCheck, Input } from '@angular/core';
 import { ItemDetailDto } from '../dtos/item-detail-dto';
 import { CommonModule } from '@angular/common';
 
@@ -9,6 +9,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './placeholder.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PlaceholderComponent {
+export class PlaceholderComponent implements DoCheck {
   @Input() itemDetail: ItemDetailDto | null = null;
+
+  ngDoCheck() {
+    console.log('PlaceholderComponent DoCheck called. Current itemDetail:', this.itemDetail);
+  }
 }

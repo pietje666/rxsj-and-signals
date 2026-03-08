@@ -10,4 +10,7 @@
     <p>Description: {{itemDetails.country}}</p>
     <p>Price: {{itemDetails.detail}}</p>
 }
-<app-placeholder [itemDetail]="itemDetails"></app-placeholder>
+<div class="two-columns">
+    <app-placeholder class="grow margin-auto" [itemDetail]="itemDetails"></app-placeholder>
+    <component-with-button class="grow margin-auto"></component-with-button>
+</div>

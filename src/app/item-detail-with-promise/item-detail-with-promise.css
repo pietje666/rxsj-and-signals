@@ -4,3 +4,17 @@
   padding: 2rem;
   border-radius: 8px;
 }
+
+.two-columns {
+  display: flex;
+  gap: 2rem;
+}
+
+.margin-auto {
+  margin: auto;
+} 
+
+.grow {
+  flex-grow: 1;
+}
+
