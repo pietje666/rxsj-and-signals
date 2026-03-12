@@ -1,0 +1,27 @@
+<section class="signal-array">
+  <h1>Signal array update</h1>
+
+  <label>
+    New item
+    <input type="text" [(ngModel)]="newItem" />
+  </label>
+
+  <div class="row">
+    <button type="button" (click)="addBad()">Add (bad: mutate)</button>
+    <button type="button" (click)="addGood()">Add (good: update)</button>
+  </div>
+
+  <p class="message">{{ message() }}</p>
+  <p>Count of items: {{ countOfItems() }}</p>
+  <ul>    
+    @for (item of items(); track $index) {
+      <li>{{ item }}</li>
+    }
+  </ul>
+</section>
+
+<example-code
+  title="Example code"
+  [templatePath]="'/app-source/signal-array-update/signal-array-update.html'"
+  [componentPath]="'/app-source/signal-array-update/signal-array-update.ts'"
+></example-code>
