@@ -1,0 +1,22 @@
+<section class="person-form">
+  <h1>Person form (bad set)</h1>
+  <form (submit)="$event.preventDefault(); addBad()">
+    <input type="text" placeholder="First name" [(ngModel)]="firstName" name="firstName" />
+    <input type="text" placeholder="Last name" [(ngModel)]="lastName" name="lastName" />
+    <input type="number" placeholder="Age" [(ngModel)]="age" name="age" />
+    <button type="submit">Add (bad)</button>
+  </form>
+
+  <button (click)="enableEffect()" type="button">enable effect</button>
+
+  <ul>
+    @for (person of people(); track $index) {
+      <li>{{ person.firstName }} {{ person.lastName }} ({{ person.age }})</li>
+    }
+  </ul>
+
+<example-code
+  title="Example code"
+  [templatePath]="'/app-source/signal-person-form-bad-set/signal-person-form-bad-set.html'"
+  [componentPath]="'/app-source/signal-person-form-bad-set/signal-person-form-bad-set.ts'"
+></example-code>

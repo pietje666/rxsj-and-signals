@@ -1,0 +1,21 @@
+.person-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+form {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+input {
+  border: 1px solid #cbd5f5;
+  padding: 0.35rem 0.5rem;
+  border-radius: 8px;
+}
+
+p {
+  margin: 0;
+}

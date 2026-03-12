@@ -15,6 +15,8 @@ import { RxjsSetVariablesInTap } from './bad-practices/rxjs-set-variables-in-tap
 import { RxjsNoUnsubscribeKeepsRunning } from './rxjs-no-unsubscribe-keeps-running/rxjs-no-unsubscribe-keeps-running';
 import { SignalBasics } from './signal-basics/signal-basics';
 import { SignalArrayUpdate } from './signal-array-update/signal-array-update';
+import { SignalPersonForm } from './signal-person-form/signal-person-form';
+import { SignalPersonFormBadSet } from './signal-person-form-bad-set/signal-person-form-bad-set';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -26,6 +28,8 @@ export const routes: Routes = [
   { path: 'rxjs-no-unsubscribe-keeps-running', component: RxjsNoUnsubscribeKeepsRunning},
   { path: 'signal-basics', component: SignalBasics},
   { path: 'signal-array-update', component: SignalArrayUpdate},
+  { path: 'signal-person-form', component: SignalPersonForm},
+  { path: 'signal-person-form-bad-set', component: SignalPersonFormBadSet},
   { path: 'signal-item-detail-without-select', component: SignalItemDetailWithoutSelect},
   { path: 'promise-item-detail', component: PromiseItemDetail},
   { path: 'promise-item-detail-without-select', component: PromiseItemDetailWithoutSelect},
