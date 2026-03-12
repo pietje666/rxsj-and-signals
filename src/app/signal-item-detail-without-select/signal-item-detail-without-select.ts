@@ -8,13 +8,13 @@ import { toSignal } from '@angular/core/rxjs-interop';
 
 
 @Component({
-  selector: 'app-item-detail-without-select-with-signal',
+  selector: 'signal-item-detail-without-select',
   imports: [FormsModule],
-  templateUrl: './item-detail-without-select-with-signal.html',
-  styleUrl: './item-detail-without-select-with-signal.css',
+  templateUrl: './signal-item-detail-without-select.html',
+  styleUrl: './signal-item-detail-without-select.css',
   changeDetection: ChangeDetectionStrategy.OnPush 
 })
-export class ItemDetailWithoutSelectWithSignal {
+export class SignalItemDetailWithoutSelect {
 
   public itemDetails: Signal<ItemDetailDto | undefined> = signal(undefined);
 

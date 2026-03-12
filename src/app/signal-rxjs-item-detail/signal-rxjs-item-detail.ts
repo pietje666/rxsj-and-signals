@@ -7,14 +7,14 @@ import { ItemDetailDto } from '../dtos/item-detail-dto';
 import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
-  selector: 'app-rxjs-item-detail-with-signal',
+  selector: 'signal-rxjs-item-detail',
   imports: [FormsModule],
-  templateUrl: './rxjs-item-detail-with-signal.html',
-  styleUrl: './rxjs-item-detail-with-signal.css',
+  templateUrl: './signal-rxjs-item-detail.html',
+  styleUrl: './signal-rxjs-item-detail.css',
   changeDetection: ChangeDetectionStrategy.OnPush 
 })
 
-export class RxjsItemDetailWithSignal {
+export class SignalRxjsItemDetail {
 
   public items: Signal<ItemDto[] | undefined> ;
     public selectedItem$: Subject<number> = new Subject<number>();

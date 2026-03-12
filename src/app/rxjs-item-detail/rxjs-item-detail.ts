@@ -8,7 +8,7 @@ import { ItemDetailDto } from '../dtos/item-detail-dto';
 
 
 @Component({
-  selector: 'app-rxjs-item-detail',
+  selector: 'rxjs-item-detail',
   imports: [AsyncPipe, FormsModule],
   templateUrl: './rxjs-item-detail.html',
   styleUrl: './rxjs-item-detail.css',

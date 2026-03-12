@@ -7,13 +7,13 @@ import { StarredItemDto } from '../dtos/starred-item-dto';
 
 
 @Component({
-  selector: 'app-item-detail-without-select-with-promise-and-signal',
+  selector: 'promise-and-signal-item-detail-without-select',
   imports: [ FormsModule],
-  templateUrl: './item-detail-without-select-with-promise-and-signal.html',
-  styleUrl: './item-detail-without-select-with-promise-and-signal.css',
+  templateUrl: './promise-and-signal-item-detail-without-select.html',
+  styleUrl: './promise-and-signal-item-detail-without-select.css',
   changeDetection: ChangeDetectionStrategy.OnPush 
 })
-export class ItemDetailWithoutSelectWithPromiseAndSignal implements OnInit {
+export class PromiseAndSignalItemDetailWithoutSelect implements OnInit {
 
   public itemDetails = signal<ItemDetailDto | null>(null);
   public starredItem = signal<StarredItemDto | null>(null);

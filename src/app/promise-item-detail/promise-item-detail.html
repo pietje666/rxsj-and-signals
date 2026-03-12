@@ -1,8 +1,8 @@
 <select [(ngModel)]='selectedItemId' (ngModelChange)="onSelect($event)">
     <option>empty</option>
-    @for (item of (items$ | async); track $index) {
+    <!-- @for (item of (items$ | async); track $index) {
         <option [value]='item.id'>{{item.name}}</option>
-    }
+    } -->
 </select>
 <!-- @let itemDetail = itemDetails ; -->
 @if (itemDetails) {
@@ -11,6 +11,6 @@
     <p>Price: {{itemDetails.detail}}</p>
 }
 <div class="two-columns">
-    <app-placeholder class="grow margin-auto" [itemDetail]="itemDetails"></app-placeholder>
+    <placeholder class="grow margin-auto" [itemDetail]="itemDetails"></placeholder>
     <component-with-button class="grow margin-auto"></component-with-button>
 </div>

@@ -5,13 +5,13 @@ import { ItemDto } from '../dtos/item-dto';
 import { HttpResourceDataService } from '../services/http-resource-data.service';
 
 @Component({
-  selector: 'app-httpresource-item-detail-with-signal-with-two-selects',
+  selector: 'signal-httpresource-item-detail-with-two-selects',
   imports: [FormsModule],
-  templateUrl: './httpresource-item-detail-with-signal-with-two-selects.html',
-  styleUrl: './httpresource-item-detail-with-signal-with-two-selects.css',
+  templateUrl: './signal-httpresource-item-detail-with-two-selects.html',
+  styleUrl: './signal-httpresource-item-detail-with-two-selects.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HttpResourceItemDetailWithSignalWithTwoSelects {
+export class SignalHttpResourceItemDetailWithTwoSelects {
   private httpResourceDataService = inject(HttpResourceDataService);
 
   public items: Signal<ItemDto[] | undefined> = this.httpResourceDataService.itemsResource.value;

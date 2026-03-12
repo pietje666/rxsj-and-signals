@@ -5,13 +5,13 @@ import { ItemDto } from '../dtos/item-dto';
 import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
-  selector: 'app-rxjs-loading-with-signal',
+  selector: 'signal-rxjs-loading',
   imports: [],
-  templateUrl: './rxjs-loading-with-signal.html',
-  styleUrl: './rxjs-loading-with-signal.css',
+  templateUrl: './signal-rxjs-loading.html',
+  styleUrl: './signal-rxjs-loading.css',
   changeDetection: ChangeDetectionStrategy.OnPush 
 })
-export class RxjsLoadingWithSignal {
+export class SignalRxjsLoading {
   public itemDtosWrappedWithLoadState! : Signal<{ loaded: boolean; items: ItemDto[]}>;
 
   constructor(private dataService: DataService) {

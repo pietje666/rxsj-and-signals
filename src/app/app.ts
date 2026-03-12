@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app',
   imports: [RouterLink, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css',

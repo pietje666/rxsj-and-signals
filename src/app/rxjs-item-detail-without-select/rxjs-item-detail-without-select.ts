@@ -8,7 +8,7 @@ import { StarredItemDto } from '../dtos/starred-item-dto';
 
 
 @Component({
-  selector: 'app-rxjs-item-detail-without-select',
+  selector: 'rxjs-item-detail-without-select',
   imports: [AsyncPipe, FormsModule],
   templateUrl: './rxjs-item-detail-without-select.html',
   styleUrl: './rxjs-item-detail-without-select.css',

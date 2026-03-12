@@ -4,7 +4,7 @@ import { catchError, combineLatest, defer, map, of, startWith, Subject, tap } fr
 import { DataService } from '../../services/data.service';
 
 @Component({
-  selector: 'app-rxjs-set-variables-in-tap',
+  selector: 'rxjs-set-variables-in-tap',
   imports: [AsyncPipe],
   templateUrl: './rxjs-set-variables-in-tap.html',
   styleUrl: './rxjs-set-variables-in-tap.css',

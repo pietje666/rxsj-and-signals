@@ -7,13 +7,13 @@ import { StarredItemDto } from '../dtos/starred-item-dto';
 
 
 @Component({
-  selector: 'app-item-detail-without-select-with-promise',
+  selector: 'promise-item-detail-without-select',
   imports: [ FormsModule],
-  templateUrl: './item-detail-without-select-with-promise.html',
-  styleUrl: './item-detail-without-select-with-promise.css',
+  templateUrl: './promise-item-detail-without-select.html',
+  styleUrl: './promise-item-detail-without-select.css',
   changeDetection: ChangeDetectionStrategy.OnPush 
 })
-export class ItemDetailWithoutSelectWithPromise  implements OnInit {
+export class PromiseItemDetailWithoutSelect  implements OnInit {
 
   public itemDetails: ItemDetailDto | null = null;
   public starredItem: StarredItemDto | null = null;

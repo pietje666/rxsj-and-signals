@@ -6,7 +6,7 @@ import { ItemDto } from '../dtos/item-dto';
 import { AsyncPipe } from '@angular/common';
 
 @Component({
-  selector: 'app-rxjsloading',
+  selector: 'rxjs-loading',
   imports: [ AsyncPipe ],
   templateUrl: './rxjs-loading.html',
   styleUrl: './rxjs-loading.css',

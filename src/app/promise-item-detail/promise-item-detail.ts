@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { firstValueFrom, Observable } from 'rxjs';
 import { ItemDto } from '../dtos/item-dto';
-import { AsyncPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ItemDetailDto } from '../dtos/item-detail-dto';
 import { PlaceholderComponent } from "../placeholder/placeholder";
@@ -10,16 +9,16 @@ import { ComponentWithButton } from "../component-with-button/component-with-but
 
 
 @Component({
-  selector: 'app-item-detail-with-promise',
-  imports: [AsyncPipe, FormsModule, PlaceholderComponent, ComponentWithButton],
-  templateUrl: './item-detail-with-promise.html',
-  styleUrl: './item-detail-with-promise.css',
+  selector: 'promise-item-detail',
+  imports: [FormsModule, PlaceholderComponent, ComponentWithButton],
+  templateUrl: './promise-item-detail.html',
+  styleUrl: './promise-item-detail.css',
   changeDetection: ChangeDetectionStrategy.OnPush 
 })
-export class ItemDetailWithPromise implements OnInit {
+export class PromiseItemDetail implements OnInit {
 
   public items$: Observable<ItemDto[]> ;
-    public itemDetails: ItemDetailDto | null = null;
+  public itemDetails: ItemDetailDto | null = null;
 
   public selectedItemId: number | null = null;
 
@@ -27,10 +26,11 @@ export class ItemDetailWithPromise implements OnInit {
     this.items$ = dataService.getItems();
   }
     async ngOnInit(): Promise<void> {
+          this.itemDetails = await firstValueFrom(this.dataService.getItemDetails(2));
+
     }
 
   async onSelect(itemId: number) {
-    this.itemDetails = await firstValueFrom(this.dataService.getItemDetails(itemId));
     //  this.itemDetails = this.getRandomItemDetail();
 
     console.log('ItemDetails in de console😊 ', this.itemDetails);

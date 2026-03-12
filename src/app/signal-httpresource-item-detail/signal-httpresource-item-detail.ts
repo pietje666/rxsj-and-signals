@@ -6,14 +6,14 @@ import { ItemDetailDto } from '../dtos/item-detail-dto';
 import { HttpResourceDataService } from '../services/http-resource-data.service';
 
 @Component({
-  selector: 'app-httpresource-item-detail-with-signal',
+  selector: 'signal-httpresource-item-detail',
   imports: [FormsModule],
-  templateUrl: './httpresource-item-detail-with-signal.html',
-  styleUrl: './httpresource-item-detail-with-signal.css',
+  templateUrl: './signal-httpresource-item-detail.html',
+  styleUrl: './signal-httpresource-item-detail.css',
   changeDetection: ChangeDetectionStrategy.OnPush 
 })
 
-export class HttpResourceItemDetailWithSignal {
+export class SignalHttpResourceItemDetail {
 
     public items: Signal<ItemDto[] | undefined> ;
     public selectedItem$: Subject<number> = new Subject<number>();

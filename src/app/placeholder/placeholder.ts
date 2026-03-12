@@ -3,7 +3,7 @@ import { ItemDetailDto } from '../dtos/item-detail-dto';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-placeholder',
+  selector: 'placeholder',
   imports: [CommonModule],
   templateUrl: './placeholder.html',
   styleUrl: './placeholder.css',
