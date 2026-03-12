@@ -4,11 +4,12 @@ import { firstValueFrom} from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { ItemDetailDto } from '../dtos/item-detail-dto';
 import { StarredItemDto } from '../dtos/starred-item-dto';
+import { ExampleCode } from '../example-code/example-code';
 
 
 @Component({
   selector: 'promise-item-detail-without-select',
-  imports: [ FormsModule],
+  imports: [ FormsModule, ExampleCode],
   templateUrl: './promise-item-detail-without-select.html',
   styleUrl: './promise-item-detail-without-select.css',
   changeDetection: ChangeDetectionStrategy.OnPush 

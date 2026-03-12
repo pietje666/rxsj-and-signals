@@ -1,0 +1,17 @@
+<h1>rxjsloading pagina</h1>
+@let itemDtosWrappedWithLoadState = (itemDtosWrappedWithLoadState$ | async);
+
+@if (!itemDtosWrappedWithLoadState?.loaded) {
+    <p>Loading items...</p>
+}
+@else {
+    @for (item of itemDtosWrappedWithLoadState?.items; track $index) {
+        <p>{{item.name}}</p>
+    }
+}
+
+<example-code
+    title="Example code"
+    [templatePath]="'/examples/rxjs-loading/rxjs-loading.html'"
+    [componentPath]="'/examples/rxjs-loading/rxjs-loading.ts'"
+></example-code>

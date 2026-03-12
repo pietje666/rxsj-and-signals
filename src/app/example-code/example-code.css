@@ -1,0 +1,97 @@
+.code-panel {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: #0f172a;
+  color: #e2e8f0;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.25);
+}
+
+.code-title {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  color: #f8fafc;
+}
+
+.code-status {
+  margin: 0;
+  color: #cbd5f5;
+}
+
+.code-error {
+  color: #fca5a5;
+}
+
+.code-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.code-block h4 {
+  margin: 0 0 0.5rem;
+  color: #38bdf8;
+}
+
+pre {
+  margin: 0;
+  padding: 1rem;
+  border-radius: 10px;
+  background: #111827;
+  color: #f8fafc;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  overflow-x: auto;
+}
+
+code {
+  font-family: "JetBrains Mono", "Fira Code", Consolas, monospace;
+}
+
+.tok-tag {
+  color: #569cd6;
+}
+
+.tok-attr {
+  color: #9cdcfe;
+}
+
+.tok-string {
+  color: #ce9178;
+}
+
+.tok-comment {
+  color: #6a9955;
+}
+
+.tok-keyword {
+  color: #c586c0;
+}
+
+.tok-number {
+  color: #b5cea8;
+}
+
+.tok-decorator {
+  color: #4ec9b0;
+}
+
+.tok-literal {
+  color: #569cd6;
+}
+
+.tok-function {
+  color: #dcdcaa;
+}
+
+.tok-type {
+  color: #4ec9b0;
+}
+
+.tok-operator {
+  color: #d4d4d4;
+}
+
+.tok-punctuation {
+  color: #808080;
+}

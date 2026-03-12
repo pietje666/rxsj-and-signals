@@ -1,0 +1,12 @@
+<h1>Starred item by {{(starredItem)?.starredBy}}</h1>
+@if (itemDetails) {
+    <h2>Details for {{itemDetails.name}}</h2>
+    <p>Description: {{itemDetails.country}}</p>
+    <p>Price: {{itemDetails.detail}}</p>
+}
+
+<example-code
+    title="Example code"
+    [templatePath]="'/examples/promise-item-detail-without-select/promise-item-detail-without-select.html'"
+    [componentPath]="'/examples/promise-item-detail-without-select/promise-item-detail-without-select.ts'"
+></example-code>

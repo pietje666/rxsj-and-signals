@@ -2,10 +2,11 @@ import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { catchError, combineLatest, defer, map, of, startWith, Subject, tap } from 'rxjs';
 import { DataService } from '../../services/data.service';
+import { ExampleCode } from '../../example-code/example-code';
 
 @Component({
   selector: 'rxjs-set-variables-in-tap',
-  imports: [AsyncPipe],
+  imports: [AsyncPipe, ExampleCode],
   templateUrl: './rxjs-set-variables-in-tap.html',
   styleUrl: './rxjs-set-variables-in-tap.css',
   changeDetection: ChangeDetectionStrategy.OnPush

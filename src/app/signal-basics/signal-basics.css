@@ -1,0 +1,55 @@
+.basics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.basics h1,
+.basics h3 {
+  margin: 0.2rem 0;
+}
+
+.basics p {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+button {
+  border: 1px solid #cbd5f5;
+  background: #e0f2fe;
+  color: #1e3a8a;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #bfdbfe;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+}
+
+input {
+  border: 1px solid #cbd5f5;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+li {
+  font-size: 0.85rem;
+}

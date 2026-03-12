@@ -5,11 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { ItemDetailDto } from '../dtos/item-detail-dto';
 import { StarredItemDto } from '../dtos/starred-item-dto';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { ExampleCode } from '../example-code/example-code';
 
 
 @Component({
   selector: 'signal-item-detail-without-select',
-  imports: [FormsModule],
+  imports: [FormsModule, ExampleCode],
   templateUrl: './signal-item-detail-without-select.html',
   styleUrl: './signal-item-detail-without-select.css',
   changeDetection: ChangeDetectionStrategy.OnPush 

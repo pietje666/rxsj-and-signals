@@ -1,0 +1,12 @@
+<h1>Starred item by {{(starredItem$ | async)?.starredBy}}</h1>
+@if ((itemDetails$ | async); as itemDetail) {
+    <h2>Details for {{itemDetail.name}}</h2>
+    <p>Description: {{itemDetail.country}}</p>
+    <p>Price: {{itemDetail.detail}}</p>
+}
+
+<example-code
+    title="Example code"
+    [templatePath]="'/examples/rxjs-item-detail-without-select/rxjs-item-detail-without-select.html'"
+    [componentPath]="'/examples/rxjs-item-detail-without-select/rxjs-item-detail-without-select.ts'"
+></example-code>

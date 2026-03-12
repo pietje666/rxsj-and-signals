@@ -6,11 +6,12 @@ import { FormsModule } from '@angular/forms';
 import { ItemDetailDto } from '../dtos/item-detail-dto';
 import { PlaceholderComponent } from "../placeholder/placeholder";
 import { ComponentWithButton } from "../component-with-button/component-with-button";
+import { ExampleCode } from '../example-code/example-code';
 
 
 @Component({
   selector: 'promise-item-detail',
-  imports: [FormsModule, PlaceholderComponent, ComponentWithButton],
+  imports: [FormsModule, PlaceholderComponent, ComponentWithButton, ExampleCode],
   templateUrl: './promise-item-detail.html',
   styleUrl: './promise-item-detail.css',
   changeDetection: ChangeDetectionStrategy.OnPush 

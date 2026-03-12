@@ -1,0 +1,20 @@
+<section class="code-panel">
+  <h3 class="code-title">{{ title() }}</h3>
+
+  @if (isLoading()) {
+    <p class="code-status">Loading code…</p>
+  } @else if (loadError()) {
+    <p class="code-status code-error">{{ loadError() }}</p>
+  } @else {
+    <div class="code-grid">
+      <div class="code-block">
+        <h4>Component</h4>
+        <pre><code [innerHTML]="componentCodeHtml()"></code></pre>
+      </div>
+      <div class="code-block">
+        <h4>Template</h4>
+        <pre><code [innerHTML]="templateCodeHtml()"></code></pre>
+      </div>
+    </div>
+  }
+</section>

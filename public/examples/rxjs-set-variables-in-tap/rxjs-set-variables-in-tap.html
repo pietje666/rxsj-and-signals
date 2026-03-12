@@ -1,0 +1,79 @@
+<section class="page">
+  <header class="page-header">
+    <div>
+      <p class="eyebrow">Bad practice</p>
+      <h1>Setting local variables inside tap()</h1>
+      <p class="subtitle">
+        A very common pattern is “filter a list and show a result count.” This example filters the
+        list in the stream, but the count is set imperatively in tap() from the unfiltered data.
+      </p>
+    </div>
+  </header>
+
+  <label class="search">
+    <span>Filter by name</span>
+    <input
+      #searchInput
+      type="search"
+      placeholder="Try typing a letter"
+      (input)="onQueryChange(searchInput.value)"
+    />
+  </label>
+
+  <div class="status-row">
+    <div class="status-card">
+      <p class="label">Loading flag</p>
+      <p class="value">{{ isLoading ? 'true' : 'false' }}</p>
+    </div>
+    <div class="status-card">
+      <p class="label">Result count (set in tap)</p>
+      <p class="value">{{ itemsCount }}</p>
+    </div>
+  </div>
+
+  @if (loadError) {
+    <div class="alert" role="alert">{{ loadError }}</div>
+  }
+
+  <div class="split">
+    <div class="panel bad">
+      <h2>Why this is a problem</h2>
+      <ul>
+        <li>The list is filtered in the stream, but the count is set from the unfiltered list.</li>
+        <li>Typing in the filter changes the list, yet the count stays stale.</li>
+        <li>shareReplay does not fix this because the problem is split state.</li>
+        <li>Derived values should come from the stream, not from imperative side effects.</li>
+      </ul>
+    </div>
+    <div class="panel good">
+      <h2>Preferred approach</h2>
+      <ul>
+        <li>Expose a view-model stream with both list and count.</li>
+        <li>Derive count with map/computed instead of mutating local variables.</li>
+        <li>Keep side effects out of the data pipeline.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="list" aria-live="polite">
+    <h3 class="section-title">Filtered list</h3>
+    @if (filteredItems$ | async; as items) {
+      @if (items.length > 0) {
+        <ul class="items">
+          @for (item of items; track item.id) {
+            <li class="item">
+              <span class="name">{{ item.name }}</span>
+            </li>
+          }
+        </ul>
+        <p class="value">Total amount of items {{ itemsCount }}</p>
+      } 
+    }
+  </div>
+</section>
+
+<example-code
+  title="Example code"
+  [templatePath]="'/examples/rxjs-set-variables-in-tap/rxjs-set-variables-in-tap.html'"
+  [componentPath]="'/examples/rxjs-set-variables-in-tap/rxjs-set-variables-in-tap.ts'"
+></example-code>

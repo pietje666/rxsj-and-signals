@@ -5,10 +5,11 @@ import { Subject, switchMap } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { ItemDetailDto } from '../dtos/item-detail-dto';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { ExampleCode } from '../example-code/example-code';
 
 @Component({
   selector: 'signal-rxjs-item-detail',
-  imports: [FormsModule],
+  imports: [FormsModule, ExampleCode],
   templateUrl: './signal-rxjs-item-detail.html',
   styleUrl: './signal-rxjs-item-detail.css',
   changeDetection: ChangeDetectionStrategy.OnPush 

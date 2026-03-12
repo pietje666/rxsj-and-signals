@@ -4,10 +4,11 @@ import { Subject } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { ItemDetailDto } from '../dtos/item-detail-dto';
 import { HttpResourceDataService } from '../services/http-resource-data.service';
+import { ExampleCode } from '../example-code/example-code';
 
 @Component({
   selector: 'signal-httpresource-item-detail',
-  imports: [FormsModule],
+  imports: [FormsModule, ExampleCode],
   templateUrl: './signal-httpresource-item-detail.html',
   styleUrl: './signal-httpresource-item-detail.css',
   changeDetection: ChangeDetectionStrategy.OnPush 

@@ -3,10 +3,11 @@ import { FormsModule } from '@angular/forms';
 import { ItemDetailDto } from '../dtos/item-detail-dto';
 import { ItemDto } from '../dtos/item-dto';
 import { HttpResourceDataService } from '../services/http-resource-data.service';
+import { ExampleCode } from '../example-code/example-code';
 
 @Component({
   selector: 'signal-httpresource-item-detail-with-two-selects',
-  imports: [FormsModule],
+  imports: [FormsModule, ExampleCode],
   templateUrl: './signal-httpresource-item-detail-with-two-selects.html',
   styleUrl: './signal-httpresource-item-detail-with-two-selects.css',
   changeDetection: ChangeDetectionStrategy.OnPush

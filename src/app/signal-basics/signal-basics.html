@@ -1,0 +1,38 @@
+<section class="basics">
+  <h1>Signals basics</h1>
+  <div class="row">
+    <button type="button" (click)="decrement()">-</button>
+    <span>count: {{ count() }}</span>
+    <button type="button" (click)="increment()">+</button>
+  </div>
+
+  <label>
+    count set()
+    <input type="number" [value]="count()" (input)="setCount($any($event.target).valueAsNumber)"/>
+  </label>
+  <label>
+    step set()
+    <input type="number" [value]="step()" (input)="setStep($any($event.target).valueAsNumber)"/>
+  </label>
+  <label>
+    manual change linkedSignal set()
+    <input type="number" [value]="linkedTotal()" (input)="setLinkedTotal($any($event.target).valueAsNumber)"/>
+  </label>
+
+  <p>computed doubled: {{ doubled() }}</p>
+  <p>computed count + step: {{ totalWithStep() }}</p>
+  <p>linkedSignal total: {{ linkedTotal() }}</p>
+
+  <h3>effect log</h3>
+  <ul>
+    @for (message of logMessages(); track $index) {
+      <li>{{ message }}</li>
+    }
+  </ul>
+</section>
+
+<example-code
+  title="Example code"
+  [templatePath]="'/app-source/signal-basics/signal-basics.html'"
+  [componentPath]="'/app-source/signal-basics/signal-basics.ts'"
+></example-code>

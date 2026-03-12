@@ -12,6 +12,8 @@ import { PromiseAndSignalItemDetailWithoutSelect } from './promise-and-signal-it
 import { SignalHttpResourceItemDetail } from './signal-httpresource-item-detail/signal-httpresource-item-detail';
 import { SignalHttpResourceItemDetailWithTwoSelects } from './signal-httpresource-item-detail-with-two-selects/signal-httpresource-item-detail-with-two-selects';
 import { RxjsSetVariablesInTap } from './bad-practices/rxjs-set-variables-in-tap/rxjs-set-variables-in-tap';
+import { RxjsNoUnsubscribeKeepsRunning } from './rxjs-no-unsubscribe-keeps-running/rxjs-no-unsubscribe-keeps-running';
+import { SignalBasics } from './signal-basics/signal-basics';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -20,6 +22,8 @@ export const routes: Routes = [
   { path: 'rxjs-item-detail', component: RxjsItemDetail},
   { path: 'signal-rxjs-item-detail', component: SignalRxjsItemDetail},
   { path: 'rxjs-item-detail-without-select', component: RxjsItemDetailWithoutSelect},
+  { path: 'rxjs-no-unsubscribe-keeps-running', component: RxjsNoUnsubscribeKeepsRunning},
+  { path: 'signal-basics', component: SignalBasics},
   { path: 'signal-item-detail-without-select', component: SignalItemDetailWithoutSelect},
   { path: 'promise-item-detail', component: PromiseItemDetail},
   { path: 'promise-item-detail-without-select', component: PromiseItemDetailWithoutSelect},

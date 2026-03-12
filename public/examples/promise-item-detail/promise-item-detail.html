@@ -1,0 +1,22 @@
+<select [(ngModel)]='selectedItemId' (ngModelChange)="onSelect($event)">
+    <option>empty</option>
+    <!-- @for (item of (items$ | async); track $index) {
+        <option [value]='item.id'>{{item.name}}</option>
+    } -->
+</select>
+<!-- @let itemDetail = itemDetails ; -->
+@if (itemDetails) {
+    <h2>Details for {{itemDetails.name}}</h2>
+    <p>Description: {{itemDetails.country}}</p>
+    <p>Price: {{itemDetails.detail}}</p>
+}
+<div class="two-columns">
+    <placeholder class="grow margin-auto" [itemDetail]="itemDetails"></placeholder>
+    <component-with-button class="grow margin-auto"></component-with-button>
+</div>
+
+<example-code
+    title="Example code"
+    [templatePath]="'/examples/promise-item-detail/promise-item-detail.html'"
+    [componentPath]="'/examples/promise-item-detail/promise-item-detail.ts'"
+></example-code>

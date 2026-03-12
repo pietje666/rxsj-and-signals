@@ -1,0 +1,13 @@
+<h1>Starred item by {{ starredItem()?.starredBy }}</h1>
+@if (itemDetails(); as itemDetail) {
+    <h2>Details for {{itemDetail.name}}</h2>
+    <p>Description: {{itemDetail.country}}</p>
+    <p>Price: {{itemDetail.detail}}</p>
+}
+<h1>dees macheert niet 😭</h1>
+
+<example-code
+    title="Example code"
+    [templatePath]="'/examples/signal-item-detail-without-select/signal-item-detail-without-select.html'"
+    [componentPath]="'/examples/signal-item-detail-without-select/signal-item-detail-without-select.ts'"
+></example-code>

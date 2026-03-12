@@ -5,11 +5,12 @@ import { ItemDto } from '../dtos/item-dto';
 import { AsyncPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ItemDetailDto } from '../dtos/item-detail-dto';
+import { ExampleCode } from '../example-code/example-code';
 
 
 @Component({
   selector: 'rxjs-item-detail',
-  imports: [AsyncPipe, FormsModule],
+  imports: [AsyncPipe, FormsModule, ExampleCode],
   templateUrl: './rxjs-item-detail.html',
   styleUrl: './rxjs-item-detail.css',
   changeDetection: ChangeDetectionStrategy.OnPush 

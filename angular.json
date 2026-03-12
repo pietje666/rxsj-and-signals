@@ -22,6 +22,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*.{ts,html,css}",
+                "input": "src/app",
+                "output": "app-source"
               }
             ],
             "styles": [

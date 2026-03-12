@@ -4,10 +4,11 @@ import { DataService } from '../services/data.service';
 import { map, Observable, startWith } from 'rxjs';
 import { ItemDto } from '../dtos/item-dto';
 import { AsyncPipe } from '@angular/common';
+import { ExampleCode } from '../example-code/example-code';
 
 @Component({
   selector: 'rxjs-loading',
-  imports: [ AsyncPipe ],
+  imports: [ AsyncPipe, ExampleCode ],
   templateUrl: './rxjs-loading.html',
   styleUrl: './rxjs-loading.css',
 })
@@ -18,7 +19,8 @@ export class RxjsLoading {
   constructor(private dataService: DataService) {}
   
   ngOnInit() {
-    this.itemDtosWrappedWithLoadState$ = this.dataService.getItems().pipe(map((items) =>({ loaded: true, items })), startWith({ loaded: false, items: [] }));
+    this.itemDtosWrappedWithLoadState$ = 
+      this.dataService.getItems().pipe(map((items) =>({ loaded: false, items })), startWith({ loaded: false, items: [] }));
   }
 
 }

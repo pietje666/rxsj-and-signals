@@ -5,11 +5,12 @@ import { AsyncPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ItemDetailDto } from '../dtos/item-detail-dto';
 import { StarredItemDto } from '../dtos/starred-item-dto';
+import { ExampleCode } from '../example-code/example-code';
 
 
 @Component({
   selector: 'rxjs-item-detail-without-select',
-  imports: [AsyncPipe, FormsModule],
+  imports: [AsyncPipe, FormsModule, ExampleCode],
   templateUrl: './rxjs-item-detail-without-select.html',
   styleUrl: './rxjs-item-detail-without-select.css',
   changeDetection: ChangeDetectionStrategy.OnPush 
